@@ -18,6 +18,7 @@ function App() {
 
   // 當前總結果
   const result = useRef(0);
+  // 當前currentNumber是否是結果
   const isTotal = useRef(true);
   // 過程紀錄
   let [process, setProcess] = useState('');
@@ -234,6 +235,8 @@ function App() {
       handleNumberClicked('8')
     } else if (e.keyCode === 57) {
       handleNumberClicked('9')
+    } else if (e.keyCode === 190) {
+      handleNumberClicked('.')
     }
   }
 
