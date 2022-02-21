@@ -13,7 +13,8 @@ function App() {
   };
   const errorMsg = {
     Infinity: 'Infinity',
-    Error: 'Error'
+    Error: 'Error',
+    CannotIntoZero: '無法除以0'
   }
 
   // 當前總結果
@@ -169,8 +170,8 @@ function App() {
         result.current = result.current - currentNum;
         break;
       case operators.into:
-        if (currentNumber === '0' && result.current === 0) {
-          settingNumberAndSize(errorMsg.Error);
+        if (currentNum === 0) {
+          settingNumberAndSize(errorMsg.CannotIntoZero);
           return;
         }
         result.current = result.current / currentNum;
