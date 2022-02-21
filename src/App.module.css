@@ -27,6 +27,7 @@
 }
 
 .inputShow .process {
+  padding-left: 10px;
   height: 35px;
   color: #00C4FF;
   display: flex;
